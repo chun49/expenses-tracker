@@ -1,0 +1,1 @@
+<progress class="progress is-info is-small" max="100">Loading</progress>
