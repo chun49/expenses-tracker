@@ -1,3 +1,9 @@
+<script>
+import Navbar from "./Navbar.svelte";
+
+
+</script>
+<Navbar/>
 <section class="hero is-link is-fullheight-with-navbar">
     <div class="hero-body">
         <div class="container">

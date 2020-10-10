@@ -11,6 +11,7 @@
       balance,
       income,
     } from "../stores";
+import Navbar from "./Navbar.svelte";
     let input = 0;
     let typeOfTransaction = "+";
     let loading = false;
@@ -44,7 +45,7 @@
       margin: 40px auto;
     }
   </style>
-  
+  <Navbar/>
   <div class="app container">
     <div class="field has-addons">
       <p class="control">
@@ -71,7 +72,7 @@
     {/if}
   
     {#if $transactions.length > 0}
-      <SummaryCard mode="balance" value={$balance} />
+      <SummaryCard mode="balance" value={$balance} on: />
       <div class="columns">
         <div class="column">
           <SummaryCard mode="income" value={$income} />
