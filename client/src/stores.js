@@ -1,4 +1,5 @@
 import { writable, derived } from "svelte/store";
+export const user = writable(null)
 export const transactions = writable([]);
 export const sortedTransactions = derived(transactions, (value) =>
   value.sort((a, b) => b.date - a.date)

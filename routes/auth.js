@@ -11,14 +11,14 @@ router.get("/user", (req, res) => {
   }
 });
 router.post(
-  "/sign-up",
+  "/signup",
   async (req, res, next) => {
     const { username, password } = req.body;
     try {
       await User.register({ username }, password);
     } catch (error) {
       if (error.name === "UserExistsError") {
-        return res.status(400).json({ message: error.message });
+        return res.status(400).json({ message: error});
       }
       return res
         .status(500)
