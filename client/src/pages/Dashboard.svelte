@@ -45,7 +45,9 @@
     margin: 40px auto;
   }
 </style>
-<Navbar />
+<svelte:head>
+  <title>Dashboard Page</title>
+</svelte:head>
 <div class="app container">
   <div class="field has-addons">
     <p class="control">
@@ -72,7 +74,7 @@
   {/if}
 
   {#if $transactions.length > 0}
-    <SummaryCard mode="balance" value={$balance} on: />
+    <SummaryCard mode="balance" value={$balance} />
     <div class="columns">
       <div class="column">
         <SummaryCard mode="income" value={$income} />

@@ -64,7 +64,7 @@ router.post('/update-password',(req,res,next) => {
         })
     } catch (error) {
         if (error.name === 'IncorrectPasswordError') {
-            return res.status(400).json({message : error.message})
+            return res.status(400).json({message : error})
         }
         return res.status(500).json({message : 'There was an error '})
     }

@@ -14,7 +14,7 @@
 <nav class="navbar is-info">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/#" class="navbar-item title">💸</a>
+      <a href="/#" class="navbar-item"><span class="title">💸</span></a>
       <span
         role="button"
         class:is-active={isActive}

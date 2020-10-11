@@ -2,7 +2,6 @@
   import axios from "axios";
   import { user } from "../stores";
   import { push } from "svelte-spa-router";
-  import Navbar from "./Navbar.svelte";
   let username;
   let password;
   let errorMessage;
@@ -27,7 +26,6 @@
   }
 </script>
 
-<Navbar />
 <div class="container">
   <div class="section">
     <h1 class="title">Login</h1>

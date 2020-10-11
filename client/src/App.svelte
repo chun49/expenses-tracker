@@ -6,6 +6,8 @@
   import Dashboard from "./pages/Dashboard.svelte";
   import Home from "./pages/Home.svelte";
   import Login from "./pages/Login.svelte";
+  import Navbar from "./pages/Navbar.svelte";
+  import Profile from "./pages/Profile.svelte";
   import Signup from "./pages/Signup.svelte";
   import { user } from "./stores";
   let loading = true;
@@ -17,6 +19,7 @@
   const routes = {
     "/": wrap(Home, { reason: "authenticated" }, () => !$user),
     "/dashboard": wrap(Dashboard, { reason: "unauthenticated" }, () => $user),
+    "/profile": wrap(Profile, { reason: "unauthenticated" }, () => $user),
     "/signup": wrap(Signup, { reason: "authenticated" }, () => !$user),
     "/login": wrap(Login, { reason: "authenticated" }, () => !$user),
   };
@@ -46,5 +49,6 @@
     <Loading />
   </div>
 {:else}
+  <Navbar />
   <Router {routes} on:conditionsFailed={conditionsFailed} />
 {/if}
